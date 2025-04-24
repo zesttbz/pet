@@ -37,9 +37,6 @@ class Pet(db.Model):
             'bathed_today': self.bathed_today
         }
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
 
 @app.route('/')
 def index():
@@ -88,4 +85,6 @@ def pet():
     return jsonify(pet.to_dict() if pet else {})
 
 if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
