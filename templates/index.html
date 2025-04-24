@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Game</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐾 Pet Care Game</h1>
+        <div id="pet-status">
+            <p>Name: <span id="pet-name"></span></p>
+            <p>Level: <span id="pet-level"></span></p>
+            <p>EXP: <span id="pet-exp"></span></p>
+        </div>
+        <h3>🎯 Daily Tasks</h3>
+        <ul id="daily-tasks">
+            <li><button onclick="doAction('feed')" id="feed-btn">🍖 Feed</button></li>
+            <li><button onclick="doAction('play')" id="play-btn">🎾 Play</button></li>
+            <li><button onclick="doAction('bathe')" id="bathe-btn">🛁 Bathe</button></li>
+        </ul>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
